@@ -104,7 +104,8 @@
                         <div className="col"><h2>單一產品細節</h2>
                             {targetPro.id ? (
                                 <div className="card">
-                                    <img src={targetPro.imageUrl} className="card-img-top" alt={targetPro.title} />
+                                    <img src={targetPro.imageUrl} className="card-img-top img-fluid mx-auto w-75" 
+                                    alt={targetPro.title}  />
                                     <div className="card-body">
                                         <h5 className="card-title">{targetPro.title}<span className="badge text-bg-primary">{targetPro.category}</span>
                                         </h5>
@@ -113,7 +114,7 @@
                                         <p className="card-text"><del style={{ color: 'gray' }}>{targetPro.origin_price}</del>/ {targetPro.price}元</p>
                                         <h5 className="card-title">更多圖片：</h5>
                                         {targetPro.imagesUrl?.map((img, idx) => {
-                                            return <img className="img-fluid" src={img} key={idx} />
+                                            return <img className="img-fluid my-1" src={img} key={idx}/>
                                         })}
                                     </div>
                                 </div>
